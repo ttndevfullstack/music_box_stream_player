@@ -159,6 +159,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Flugg\Responder\ResponderServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -168,6 +169,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -185,4 +187,18 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | API Versions is supported
+    |--------------------------------------------------------------------------
+    |
+    | This array of versions will be supported by this application
+    |
+    */
+
+    'api_supported' => [
+        'types' => ['web', 'api'],
+        'versions' => ['v1'],
+    ],
 ];
