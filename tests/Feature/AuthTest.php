@@ -4,16 +4,12 @@ namespace Tests\Feature;
 
 use App\Presentation\Models\User;
 use App\Presentation\Services\AuthenticationService;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 
 use function Tests\create_user;
 
 class AuthTest extends TestCase
 {
-    // use DatabaseMigrations;
-    use DatabaseTransactions;
-
     protected User $user;
 
     protected function setUp(): void

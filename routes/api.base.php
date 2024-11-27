@@ -1,6 +1,7 @@
 <?php
 
 use App\Presentation\Http\Controllers\API\AuthController;
+use App\Presentation\Http\Controllers\API\FetchInitialDataController;
 use App\Presentation\Http\Controllers\API\GetOneTimeTokenController;
 use App\Presentation\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +16,8 @@ Route::middleware('api')->group(static function (): void {
         Route::get('one-time-token', GetOneTimeTokenController::class);
         Route::delete('me', [AuthController::class, 'logout'])->name('auth.logout');
 
+        Route::get('data', FetchInitialDataController::class);
+
+        // Route::apiResource('users', UserController::class);
     });
-    Route::apiResource('users', UserController::class);
 });

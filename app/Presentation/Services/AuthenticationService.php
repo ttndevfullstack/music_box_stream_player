@@ -49,7 +49,7 @@ class AuthenticationService implements IAuthenticationServiceInterface
 
     // public function logoutViaBearerToken(string $token): void
     // {
-    //     // Todo
+    //     // TodoX
     // }
 
     // public function trySendResetPasswordLink(string $email): bool

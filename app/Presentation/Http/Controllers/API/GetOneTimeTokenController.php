@@ -2,11 +2,12 @@
 
 namespace App\Presentation\Http\Controllers\API;
 
+use App\Presentation\Http\Controllers\Controller;
 use App\Presentation\Services\AuthenticationService;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\JsonResponse;
 
-class GetOneTimeTokenController
+class GetOneTimeTokenController extends Controller
 {
     public function __invoke(AuthenticationService $auth, Authenticatable $user): JsonResponse
     {
