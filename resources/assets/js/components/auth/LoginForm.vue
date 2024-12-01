@@ -1,14 +1,10 @@
 <template>
   <div class="flex items-center justify-center min-h-screen my-0 mx-auto flex-col gap-5">
-    <form 
-      v-show="!showingForgotPasswordForm" 
-      :class="{ error: failed }"
+    <form v-show="!showingForgotPasswordForm" :class="{ error: failed }"
       class="w-full sm:w-[288px] sm:border duration-500 p-7 rounded-xl border-transparent sm:bg-white/10 space-y-3"
-      data-testid="login-form" 
-      @submit.prevent="login"
-    >
+      data-testid="login-form" @submit.prevent="login">
       <div class="text-center mb-8">
-        <img alt="Koel's logo" class="inline-block" src="../../../img/logo.webp" width="156">
+        <img alt="Koel's logo" class="inline-block" src="../../../img/icon.png" width="156">
       </div>
 
       <FormRow>
@@ -29,17 +25,21 @@
         </a>
       </FormRow>
     </form>
+
+    <ForgotPasswordForm v-if="showingForgotPasswordForm" @cancel="showingForgotPasswordForm = false"/>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { authService } from '@/services';
+import { logger } from '@/utils';
 
 import FormRow from '@/components/ui/FormRow.vue';
 import TextInput from '@/components/ui/TextInput.vue';
 import PasswordField from '@/components/ui/PasswordField.vue';
 import Btn from '@/components/ui/Btn.vue';
+import ForgotPasswordForm from '@/components/auth/ForgotPasswordForm.vue';
 
 const DEMO_ACCOUNT = {
   email: 'demo@musicbox.dev',
@@ -64,7 +64,9 @@ const login = async () => {
 
     emit('loggedIn')
   } catch (error: unknown) {
-
+    failed.value = true
+    logger.error(error)
+    setTimeout(() => (failed.value = false), 2000);
   }
 }
 

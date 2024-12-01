@@ -1,5 +1,5 @@
 import { Ref } from "vue";
-import { requireInjection } from "@/utils/helper";
+import { requireInjection } from "@/utils";
 import { OverlayKey } from "@/symbols";
 import Overlay from "@/components/ui/Overlay.vue";
 

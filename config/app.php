@@ -199,6 +199,6 @@ return [
 
     'api_supported' => [
         'types' => ['web', 'api'],
-        'versions' => ['v1'],
+        'versions' => ['v1', 'v2'],
     ],
 ];

@@ -39,6 +39,8 @@
         "autoprefixer": "^10.4.19",
         "axios": "^1.6.4",
         "bootstrap": "^5.2.3",
+        "cross-env": "^7.0.3",
+        "js-md5": "^0.8.3",
         "laravel-vite-plugin": "^1.0.0",
         "postcss": "^8.4.38",
         "postcss-mixins": "^10.0.0",

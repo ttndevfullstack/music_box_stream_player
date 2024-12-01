@@ -3,7 +3,7 @@
 <head>
     <title>@yield('title')</title>
 
-    <meta name="description" content="{{ config('app.tagline') }}">
+    <meta name="description" content="{{ config('music_box.tagline') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
@@ -11,10 +11,10 @@
     <meta name="theme-color" content="#282828">
     <meta name="msapplication-navbutton-color" content="#282828">
 
+    <link rel="icon" href="{{ static_url('img/icon.png') }}">
     {{-- <link rel="manifest" href="{{ static_url('manifest.json') }}"/>
     <meta name="msapplication-config" content="{{ static_url('browserconfig.xml') }}"/>
     <link rel="icon" type="image/x-icon" href="{{ static_url('img/favicon.ico') }}"/>
-    <link rel="icon" href="{{ static_url('img/icon.png') }}">
     <link rel="apple-touch-icon" href="{{ static_url('img/icon.png') }}"> --}}
 
     {{-- @unless(License::isPlus())

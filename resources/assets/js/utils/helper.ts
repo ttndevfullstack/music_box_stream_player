@@ -9,3 +9,5 @@ export const requireInjection = <T>(key: InjectionKey<T>, defaultValue?: T) => {
 
     return value;
 };
+
+export const noop = () => {};
