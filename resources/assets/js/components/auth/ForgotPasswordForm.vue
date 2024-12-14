@@ -19,9 +19,9 @@ import { ref } from 'vue';
 import { authService } from '@/services';
 import { useMessageToaster } from '@/composables';
 
-import FormRow from '@/components/ui/FormRow.vue';
-import TextInput from '@/components/ui/TextInput.vue';
-import Btn from '@/components/ui/Btn.vue';
+import FormRow from '@/components/ui/form/FormRow.vue';
+import TextInput from '@/components/ui/form/TextInput.vue';
+import Btn from '@/components/ui/form/Btn.vue';
 
 const { toastSuccess } = useMessageToaster()
 

@@ -35,6 +35,7 @@
 <script>
     window.BASE_URL = @json(asset(''));
     window.IS_DEMO = @json(config('music_box.misc.demo'));
+    window.IS_PRODUCTION = @json(config('app.env') === 'production');
 
     // window.PUSHER_APP_KEY = @json(config('broadcasting.connections.pusher.key'));
     // window.PUSHER_APP_CLUSTER = @json(config('broadcasting.connections.pusher.options.cluster'));

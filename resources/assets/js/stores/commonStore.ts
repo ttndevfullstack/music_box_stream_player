@@ -1,4 +1,4 @@
-import { http } from "@/services/http";
+import { http } from "@/services";
 import { reactive } from "vue";
 import { userStore } from ".";
 

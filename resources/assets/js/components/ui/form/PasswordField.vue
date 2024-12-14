@@ -17,7 +17,7 @@
 import { computed, ref } from 'vue'
 import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons'
 
-import TextInput from '@/components/ui/TextInput.vue';
+import TextInput from '@/components/ui/form/TextInput.vue';
 
 const props = withDefaults(defineProps<{ modelValue?: any }>(), { modelValue: null })
 const emit = defineEmits<{ (e: 'update:modelValue', value: any): void }>()

@@ -1,0 +1,11 @@
+{
+    "projectId": "t39zbg",
+    "baseUrl": "http://localhost:8080",
+    "pluginFile": "cypress/plugins/index.js",
+    "viewportWidth": 1440,
+    "viewportHeight": 768,
+    "retries": {
+        "runMode": 3
+    },
+    "video": true
+}

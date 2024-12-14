@@ -1,3 +1,5 @@
+declare type Closure<T = unknown | any> = (...args: Array<unknown | any>) => T
+
 declare type TScreenName = 
   | "Home" 
   | "Password.Reset" 
@@ -19,6 +21,7 @@ type TRouteChangedHandler = (newRoute: TRoute, oldRoute: TRoute | undefined) => 
 interface Window {
     BASE_URL: string;
     IS_DEMO: boolean;
+    IS_PRODUCTION: boolean;
     MAILER_CONFIGURED: boolean;
 }
 
@@ -35,3 +38,5 @@ type TToastMessage = {
     content: string;
     timeout: number; // seconds
 };
+
+type TMethodOf<T> = { [K in keyof T]: T[K] extends Closure ? K : never; }[keyof T]

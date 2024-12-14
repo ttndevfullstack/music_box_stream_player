@@ -35,10 +35,10 @@ import { ref } from 'vue';
 import { authService } from '@/services';
 import { logger } from '@/utils';
 
-import FormRow from '@/components/ui/FormRow.vue';
-import TextInput from '@/components/ui/TextInput.vue';
-import PasswordField from '@/components/ui/PasswordField.vue';
-import Btn from '@/components/ui/Btn.vue';
+import FormRow from '@/components/ui/form/FormRow.vue';
+import TextInput from '@/components/ui/form/TextInput.vue';
+import PasswordField from '@/components/ui/form/PasswordField.vue';
+import Btn from '@/components/ui/form/Btn.vue';
 import ForgotPasswordForm from '@/components/auth/ForgotPasswordForm.vue';
 
 const DEMO_ACCOUNT = {

@@ -16,15 +16,15 @@
 import { defineAsyncComponent, onMounted, provide, ref } from "vue";
 import { MessageToasterKey, OverlayKey } from "@/symbols";
 import { userStore } from "@/stores";
-import { useMessageToaster, useRouter } from "@/composables";
+import { useRouter } from "@/composables";
 import { authService } from "@/services";
 
 import Overlay from "@/components/ui/Overlay.vue";
 import AppInitializer from "@/components/utils/AppInitializer.vue";
 import MessageToaster from "@/components/ui/message-toaster/MessageToaster.vue";
 
-const LoginForm = defineAsyncComponent(() => import("@/components/auth/LoginForm.vue")) ;
-const ResetPasswordForm = defineAsyncComponent(() => import("@/components/auth/ResetPasswordForm.vue")) ;
+const LoginForm = defineAsyncComponent(() => import("@/components/auth/LoginForm.vue"));
+const ResetPasswordForm = defineAsyncComponent(() => import("@/components/auth/ResetPasswordForm.vue"));
 
 const overlay = ref<InstanceType<typeof Overlay>>()
 const toaster = ref<InstanceType<typeof MessageToaster>>()
@@ -43,7 +43,7 @@ onMounted(async () => {
   }
 
   await resolveRoute()
-  
+
   switch (getCurrentScreen()) {
     case "Password.Reset":
       layout.value = 'reset-password'

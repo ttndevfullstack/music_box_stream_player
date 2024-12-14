@@ -1,5 +1,5 @@
 import { useLocalStorage } from "@/composables/useLocalStorage";
-import { http } from "@/services/http";
+import { http } from "@/services";
 
 const API_TOKEN_STORAGE_KEY = "api-token";
 const AUDIO_TOKEN_STORAGE_KEY = "audio-token";

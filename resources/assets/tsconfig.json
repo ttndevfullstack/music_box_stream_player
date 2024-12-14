@@ -20,6 +20,6 @@
     "../../node_modules/vitest/globals.d.ts"
   ],
   "exclude": [
-    "js/__tests__/**/*"
+    // "js/__tests__/**/*"
   ]
 }
