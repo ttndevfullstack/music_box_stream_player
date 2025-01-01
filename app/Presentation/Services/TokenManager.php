@@ -18,10 +18,10 @@ class TokenManager
     {
         $compositeToken = CompositeToken::fromAccessTokens(
             api: $this->createToken($user),
-            // audio: $this->createToken($user, ['audio'])
+            audio: null,
         );
 
-        // Cache::forever("app.composite-tokens.$compositeToken->apiToken", $compositeToken->audioToken);
+        Cache::forever("app.composite-tokens.$compositeToken->apiToken", $compositeToken->audioToken);
 
         return $compositeToken;
     }

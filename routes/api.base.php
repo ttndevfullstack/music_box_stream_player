@@ -5,11 +5,10 @@ use App\Presentation\Http\Controllers\API\FetchInitialDataController;
 use App\Presentation\Http\Controllers\API\ForgotPasswordController;
 use App\Presentation\Http\Controllers\API\GetOneTimeTokenController;
 use App\Presentation\Http\Controllers\API\ResetPasswordController;
-use App\Presentation\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('api')->group(static function (): void {
-    Route::get('ping', static fn() => 'pong');
+    Route::get('ping', static fn () => 'pong');
     
     Route::post('me', [AuthController::class, 'login'])->name('auth.login');
     Route::post('me/otp', [AuthController::class, 'loginUsingOneTimeToken']);

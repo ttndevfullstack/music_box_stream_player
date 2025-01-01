@@ -3,7 +3,7 @@ import { routes } from "@/config";
 import { render, RenderOptions } from "@testing-library/vue";
 import { http } from "@/services";
 import { isObject, mergeWith } from 'lodash'
-import { afterEach, beforeEach, vi } from 'vitest'
+import { vi } from 'vitest'
 import { defineComponent } from "vue";
 import { MessageToasterKey, OverlayKey, RouterKey } from '@/symbols'
 import { MessageToasterStub, OverlayStub } from "@/__tests__/stubs"
@@ -57,7 +57,7 @@ export default abstract class UnitTestCase {
         methodName: M,
         implementation?: any
     ) {
-        const mock = vi.fn();
+        const mock = vi.fn ();
 
         if (implementation !== undefined) {
             mock.mockImplementation(

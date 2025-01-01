@@ -18,19 +18,19 @@ final class CompositeToken implements Arrayable
 {
     public function __construct(
         public string $apiToken,
-        // public string $audioToken,
+        public ?string $audioToken,
     ) {}
 
-    public static function fromAccessTokens(PersonalAccessTokenResult $api): self
+    public static function fromAccessTokens(PersonalAccessTokenResult $api, ?PersonalAccessTokenResult $audio): self
     {
-        return new self($api->accessToken);
+        return new self($api->accessToken, $audio?->accessToken);
     }
 
     public function toArray(): array
     {
         return [
             'token' => $this->apiToken,
-            // 'audio-token' => $this->audioToken,
+            'audio-token' => $this->audioToken,
         ];
     }
 }

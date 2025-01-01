@@ -12,7 +12,7 @@ class GetOneTimeTokenController extends Controller
     public function __invoke(AuthenticationService $auth, Authenticatable $user): JsonResponse
     {
         return responder()->success([
-            'token' => $auth->generateOneTimeToken($user)
+            'token' => $auth->generateOneTimeToken($user),
         ])->respond();
     }
 }

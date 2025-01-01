@@ -22,12 +22,12 @@ class AuthenticationServiceTest extends TestCase
 
         $this->userRepository = Mockery::mock(UserRepository::class);
         $this->tokenManager = Mockery::mock(TokenManager::class);
-        // $this->passwordBroker = Mockery::mock(PasswordBroker::class);
+        $this->passwordBroker = Mockery::mock(PasswordBroker::class);
 
         $this->authService = new AuthenticationService(
             $this->userRepository,
             $this->tokenManager,
-            // $this->passwordBroker
+            $this->passwordBroker
         );
     }
 }

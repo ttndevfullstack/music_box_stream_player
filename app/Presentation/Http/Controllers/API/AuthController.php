@@ -54,7 +54,7 @@ class AuthController extends Controller
 
         // if ($attempts >= $maxAttempts) {
         //     cache()->put($ip, $attempts, $lockoutTime);
-        //     throw new TooManyRequestsException('Too many login attempts. Please try again after ' . $lockoutTime. ' seconds.');
+            // throw new TooManyRequestsException("Too many login attempts. Please try again after $lockoutTime seconds.");
         // }
 
         try {

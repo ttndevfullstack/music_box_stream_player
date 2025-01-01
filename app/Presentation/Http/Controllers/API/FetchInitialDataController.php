@@ -13,7 +13,7 @@ class FetchInitialDataController extends Controller
     ) {
         return responder()->success(
             [
-                'current_user' => UserResource::make($user)
+                'current_user' => UserResource::make($user),
             ]
         )->respond();
     }

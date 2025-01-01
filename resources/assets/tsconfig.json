@@ -17,6 +17,7 @@
   },
   "include": [
     "js/**/*",
+    "**/*.d.ts",
     "../../node_modules/vitest/globals.d.ts"
   ],
   "exclude": [

@@ -25,6 +25,7 @@ class AuthenticationService implements IAuthenticationServiceInterface
     public function login(string $email, string $password): CompositeToken
     {
         $user = $this->userRepository->findOneByEmail($email);
+
         if (!$user || !Hash::check($password, $user->password)) {
             throw new InvalidCredentialsException();
         }
@@ -60,6 +61,7 @@ class AuthenticationService implements IAuthenticationServiceInterface
     public function trySendResetPasswordLink(string $email): bool
     {
         $user = $this->userRepository->findOneByEmail($email);
+        
         if (!$user) {
             throw new \Exception("User with email $email not found", Response::HTTP_NOT_FOUND);
         }

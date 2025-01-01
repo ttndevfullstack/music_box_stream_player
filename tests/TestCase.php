@@ -10,9 +10,4 @@ abstract class TestCase extends BaseTestCase
     use CreatesApplication;
     use DatabaseTransactions;
 
-    // public function setUp(): void
-    // {
-    //     parent::setUp();
-    // }
 }
-

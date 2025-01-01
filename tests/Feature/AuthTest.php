@@ -12,7 +12,7 @@ class AuthTest extends TestCase
 {
     protected User $user;
 
-    protected function setUp(): void
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -26,7 +26,7 @@ class AuthTest extends TestCase
     {
         $body = [
             'email' => $this->user->email,
-            'password' => 'secret'
+            'password' => 'secret',
         ];
 
         $response = $this->post('api/me', $body)
@@ -67,7 +67,7 @@ class AuthTest extends TestCase
     {
         $body = [
             'email' => $this->user->email,
-            'password' => 'wrong-secret'
+            'password' => 'wrong-secret',
         ];
 
         $this->post('api/me', $body)
@@ -83,7 +83,7 @@ class AuthTest extends TestCase
 
         $body = [
             'email' => $user->email,
-            'password' => 'secret'
+            'password' => 'secret',
         ];
 
         $response = $this->post('api/me', $body)
@@ -107,4 +107,5 @@ class AuthTest extends TestCase
                 'success' => true,
             ]);
     }
+    
 }
